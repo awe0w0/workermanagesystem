@@ -20,7 +20,8 @@ int main() {
 			wm.Exit();
 			break;
 		case 1:
-			wm.addWorker();
+//			wm.addWorker();
+			wm.Add_Emp();
 			break;
 		case 2:
 

@@ -1,5 +1,6 @@
 #pragma once
-#include "workManager.h"
+#include <iostream>
+using namespace std;
 #include <string>
 
 class Worker {

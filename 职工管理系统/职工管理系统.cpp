@@ -41,7 +41,10 @@ int main() {
 			cout << "排序成功" << endl;
 			break;
 		case 7:
-
+			wm.Clean_File();
+			break;
+		case 8:
+			wm.clear();
 			break;
 		default:
 			cout << "请输入正确的数值" << endl;

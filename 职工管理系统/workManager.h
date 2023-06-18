@@ -29,6 +29,8 @@ public:
 
 	void Sort_Emp(Worker ** arr, int begin, int end);
 
+	void Clean_File();
+
 	void Del_Emp();
 
 	int IsExist(int id);
@@ -42,6 +44,8 @@ public:
 	void save();
 
 	void Show_Menu();
+
+	void clear();
 
 	void Exit();
 

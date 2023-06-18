@@ -139,6 +139,7 @@ void workManager::Show_Menu() {
 	cout << "--------5.查找职工信息-------" << endl;
 	cout << "--------6.按照编号排序-------" << endl;
 	cout << "--------7.清空所有文档-------" << endl;
+	cout << "------------8.清屏-----------" << endl;
 	cout << "-----------------------------" << endl;
 	cout << endl;
 }
@@ -396,6 +397,38 @@ void workManager::Sort_Emp(Worker ** arr,int begin,int end) {
 	Sort_Emp(arr, begin, i - 1);
 	Sort_Emp(arr, i + 1, end);
 }
+
+void workManager::Clean_File() {
+	cout << "确认清空？" << endl;
+	cout << "1.确认" << endl;
+	cout << "2.返回" << endl;
+
+	int select = 0;
+	cin >> select;
+
+	if (select == 1) {
+		ofstream ofs(FILENAME,ios::trunc);
+		ofs.close();
+
+		if (this->m_EmpArray != NULL) {
+			for (int i = 0; i < this->m_EmpNum;i++) {
+				if (this->m_EmpArray[i] != NULL) {
+					delete this->m_EmpArray[i];
+				}
+			}
+			this->m_EmpNum = 0;
+			delete[] this->m_EmpArray;
+			this->m_EmpArray = NULL;
+			this->m_FileIsEmpty = true;
+		}
+		cout << "清除成功" << endl;
+	}
+};
+
+void workManager::clear() {
+	system("cls");
+	this->Show_Menu();
+};
 
 void workManager::addWorker() {
 	cout << "请输入要添加的职员数量" << endl;

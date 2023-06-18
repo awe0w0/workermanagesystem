@@ -49,14 +49,13 @@ workManager::~workManager() {
 
 void workManager::save() {
 	ofstream ofs;
-	ofs.open(FILENAME, ios::out | ios::app);
+	ofs.open(FILENAME, ios::out);
 
 	for (int i = 0; i < this->m_EmpNum; i++) {
 		ofs << this->m_EmpArray[i]->m_ID << " ";
 		ofs << this->m_EmpArray[i]->m_Name << " ";
 		ofs << this->m_EmpArray[i]->m_DeptID << endl;
 	}
-
 	ofs.close();
 
 }
@@ -77,6 +76,7 @@ void workManager::Add_Emp() {
 		if (this->m_EmpArray != NULL) {
 			for (int i = 0; i < this->m_EmpNum; i++) {
 				newSpace[i] = this->m_EmpArray[i];
+				
 			}
 		}
 		for (int i = 0; i < addNum; i++) {
@@ -115,9 +115,8 @@ void workManager::Add_Emp() {
 
 			newSpace[this->m_EmpNum + i] = worker;
 
-
 		}
-
+		
 		delete m_EmpArray;
 		this->m_EmpArray = newSpace;
 		this->m_EmpNum = newSize;
@@ -193,7 +192,7 @@ void workManager::init_Emp() {
 
 		this->m_EmpArray[index] = worker;
 		index++;
-		delete worker;
+
 	}
 	
 	ifs.close();

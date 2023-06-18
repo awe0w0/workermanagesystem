@@ -7,9 +7,10 @@ Boss::Boss(int id, string name, int did) {
 }
 
 void Boss::ShowInfo() {
-	cout << "老板id" << this->m_ID << endl;
-	cout << "老板名字" << this->m_Name << endl;
-	cout << "老板部门id" << this->m_DeptID << endl;
+	cout << "id：" << this->m_ID << "\t";
+	cout << "姓名：" << this->m_Name << "\t";
+	cout << "岗位：" << "老板" << "\t";
+	cout << "岗位职责：管理公司" << endl;
 }
 
 string Boss::getDeptName() {

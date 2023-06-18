@@ -23,6 +23,20 @@ public:
 
 	void init_Emp();
 
+	void Show_Emp();
+
+	void Show_Info(int i);
+
+	void Sort_Emp(Worker ** arr, int begin, int end);
+
+	void Del_Emp();
+
+	int IsExist(int id);
+
+	void Mon_Emp();
+
+	void Find_Emp();
+
 	void Add_Emp();
 
 	void save();

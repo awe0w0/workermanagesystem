@@ -7,9 +7,9 @@ Employee::Employee(int id,string name,int d_id) {
 }
 
 void Employee::ShowInfo() {
-	cout << "员工id：" << this->m_ID << endl;
-	cout << "员工姓名：" << this->m_Name << endl;
-	cout << "部门id：" << this->m_DeptID << endl;
+	cout << "id：" << this->m_ID << "\t";
+	cout << "姓名：" << this->m_Name << "\t";
+	cout << "岗位：员工" <<"\t";
 	cout << "岗位职责：与经理配合" << endl;
 }
 

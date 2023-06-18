@@ -24,19 +24,21 @@ int main() {
 			wm.Add_Emp();
 			break;
 		case 2:
-
+			wm.Show_Emp();
 			break;
 		case 3:
-
+			wm.Del_Emp();
 			break;
-		case4:
-
+		case 4:
+			wm.Mon_Emp();
 			break;
 		case 5:
-
+			wm.Find_Emp();
 			break;
 		case 6:
-
+			wm.Sort_Emp(wm.m_EmpArray,0,wm.m_EmpNum-1);
+			wm.save();
+			cout << "ÅÅÐò³É¹¦" << endl;
 			break;
 		case 7:
 
